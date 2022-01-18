@@ -1,0 +1,16 @@
+$min-color: #5b9594;
+$button-color: #59d6d4 ; 
+$hover-button: $min-color ; 
+$light-bg: #d3d3d4 ; 
+$black-color: #343434 ; 
+$white: #fff ; 
+
+//font
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Tajawal&display=swap');
+
+body{
+    font-family: 'Tajawal', sans-serif;
+    background-color: $white;
+    font-size: 16pt;
+}
