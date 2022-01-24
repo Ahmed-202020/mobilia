@@ -1,1 +1,640 @@
 @import"./vars" ; 
+
+html , body{
+    overflow-x: hidden;
+}
+//rtl
+.header{
+    background-image: url("../images/mobelia\ header@2x.png");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
+    margin-bottom: 350px;
+    .navbar{
+        z-index: 10000;
+        padding: 35px 90px 0 45px ;
+        margin-bottom: 160px;
+        .navbar-brand{
+            width: 200px ; 
+            margin-left: 0;
+            img{
+                width: 100%;
+            }
+        }
+        .navbar-collapse{
+            .navbar-nav{
+                margin-right: 80px;
+                flex-grow: 1;
+                .nav-item{
+                    display: flex;
+                    justify-content: center;
+                    flex-grow: 1;
+                    transition: all 300ms ease;
+                    -webkit-transition: all 300ms ease;
+                    -moz-transition: all 300ms ease;
+                    -ms-transition: all 300ms ease;
+                    -o-transition: all 300ms ease;
+                    .nav-link{
+                        color: $white;
+                        font-weight: bold;
+                        font-size: 16pt;
+                    }
+                    .dropdown-toggle{
+                        &::after{
+                            border: none;
+                            content: url("../icons/Icon\ ionic-ios-arrow-down.svg");
+                        }
+                    }
+                    &:hover{
+                        .nav-link{
+                            filter: brightness(95%);
+                            -webkit-filter: brightness(95%);
+                        }
+                    }
+                }
+                .dropdown{
+                    position: relative;
+                    .dropdown-menu{
+                        position: absolute;
+                        right: -114px;
+                        min-width: 14rem;
+                        border-radius: 10px;
+                        -webkit-border-radius: 10px;
+                        -moz-border-radius: 10px;
+                        -ms-border-radius: 10px;
+                        -o-border-radius: 10px;
+                        text-align: center;
+                        font-size: 16pt;
+                        color: $black-color;
+                    }
+                    .dropdown-item{
+                        text-align: center;
+                        font-size: 16pt;
+                        padding-block: 15px;
+                    }
+                    .ar{
+                        position: relative;
+                        margin-bottom: 30px;
+                        &::after{
+                            position: absolute;
+                            top: 78px;
+                            left: 22px;
+                            content: "";
+                            background-color: $light-bg;
+                            width: 80%;
+                            height: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .overlay{
+        z-index: 1;
+        position: absolute;
+        display: flex;
+        padding-right: 90px ; 
+        .caption{
+            margin-bottom: 150px;
+            padding-left: 150px;
+            .title{
+                margin-bottom: 25px;
+                h3{
+                    font-size: 24pt;
+                    color: $black-color;
+                    font-weight: bold;
+                }
+            }
+            .text{
+                font-size: 18pt;
+                color: $black-color;
+                margin-bottom: 110px;
+            }
+            .buttons{
+                .btn{
+                    box-shadow: none;
+                    border: none;
+                    background-image: linear-gradient($button-color, $min-color);
+                    color: $white;
+                    font-size: 16pt;
+                    width: 190px;
+                    padding: 5px 10px;
+                    border-radius: 7px;
+                    -webkit-border-radius: 7px;
+                    -moz-border-radius: 7px;
+                    -ms-border-radius: 7px;
+                    -o-border-radius: 7px;
+                    transition: all 300ms ease;
+                    -webkit-transition: all 300ms ease;
+                    -moz-transition: all 300ms ease;
+                    -ms-transition: all 300ms ease;
+                    -o-transition: all 300ms ease;
+                    img{
+                        width: 20px;
+                        margin-right: 5px;
+                        margin-top: 0;
+                    }
+                    &:hover{
+                        filter: brightness(90%);
+                        -webkit-filter: brightness(90%);
+                    }
+                }
+                .android{
+                    padding-block: 6.5px;
+                    margin-right: 50px;
+                }
+            }
+        }
+        .mob{
+            position: relative;
+            img{
+                position: absolute;
+                left: -55px;
+                bottom: -615px;
+                height: 1030px;
+                width: 140%;
+            }
+        }
+    }
+}
+.about-us{
+    background-image: url("../images/bg-about.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    .title{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+        font-size: 40px;
+        color: $black-color;
+        &::before ,&::after {
+            position: absolute;
+            content: "";
+            width: 35%;
+            height: 1px;
+            background-color: $light-bg;
+            top: 48px;
+            left: 70px;
+        }
+        &::after {
+            left: initial;
+            right: 70px;
+        }
+    }
+    .show-case{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .text{
+            font-size: 16pt;
+            margin-top: 100px;
+            color: $black-color;
+            padding-right: 45px;
+            .text-1{
+                margin-bottom: 40px;
+            }
+        }
+        .image{
+            width: 1000px;
+            img{
+                position: relative;
+                left: 200px;
+                top: -50px;
+                width: 100%;
+            }
+        }
+    }
+}
+.features{
+    position: relative;
+    background-image: url("../images/features\ bg\ mobelia@2x.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 500px;
+    height: 500px;
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 100px 0 0 0;
+        .title{
+            text-align: center;
+            color: $white;
+            font-size: 22pt;
+            margin-bottom: 25px;
+        }
+        .col-img{
+            img{
+                width: 100%;
+            }
+        }
+        .feature{
+            display: flex;
+            align-items: center;
+            .image{
+                background: $white;
+                width: 95px;
+                height: 95px;
+                padding: 10px 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: 95px;
+                border-radius: 15px;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                -ms-border-radius: 15px;
+                -o-border-radius: 15px;
+            }
+            .price , .delivery{
+                background-color: $min-color;
+            }
+            .content{
+                margin-right: 20px;
+                margin-bottom: 20px;
+                color: $white;
+                .title{
+                    font-size: 16pt;
+                    text-align: start;
+                    margin-bottom: 15px;
+                }
+            }
+            .custom-content , .custom-title{
+                color: $black-color;
+            }
+        }
+        .feature + .feature{
+            margin-top: 25px;
+        }
+    }
+}
+
+
+//ltr
+html[dir = "ltr"]{
+    .header{
+        .navbar{
+            padding: 35px 45px 0 90px ;
+            .navbar-brand{
+                margin-right: 0;
+                margin-left: 0;
+            }
+            .navbar-collapse{
+                .navbar-nav{
+                    margin-left: 80px;
+                    .dropdown{
+                        .dropdown-menu{
+                            right: initial;
+                            left: -114px;
+                        }
+                        .ar{
+                            &::after{
+                                right: 22px;
+                                left: initial;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .overlay{
+            padding-left: 90px;
+            padding-right: 0;
+            .caption{
+                padding-left: 0;
+                padding-right: 150px;
+                .buttons{
+                    .btn{
+                        img{
+                            margin-right: 0;
+                            margin-left: 5px;
+                        }
+                    }
+                    .android{
+                        margin-right: 0;
+                        margin-left: 50px;
+                    }
+                }
+            }
+            .mob{
+                img{
+                    left: initial;
+                    right: -285px;
+                }
+            }
+        }
+    }
+    .about-us{ 
+        .title{
+            &::before ,&::after {
+                left: initial;
+                right: 70px;
+            }
+            &::after {
+                right:  initial;
+                left: 70px;
+            }
+        }
+        .show-case{
+            .offset-1{
+                margin-right: 0;
+                margin-left: 8.33333333%;
+            }
+            .text{
+                padding-right: 0;
+                padding-left: 45px ;;
+            }
+            .image{
+                img{
+                    left: initial;
+                    right: 200px;
+                }
+            }
+        }
+    }
+    .features{
+        .overlay{
+            .title{
+                text-align: center;
+                color: $white;
+                font-size: 22pt;
+                margin-bottom: 25px;
+            }
+            .feature{
+                .content{
+                    margin-right: 0;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+// responsive design (index.html) rtl
+
+@media (max-width: 1399.98px){
+    .header{
+        .navbar{
+            padding: 35px 107px 0 77px;
+            margin-bottom: 100px;
+            .navbar-nav{
+                .dropdown{
+                    .dropdown-menu{
+                        right: -130px !important;
+                    }
+                }
+            }
+        }
+        .overlay{
+            padding-right: 110px;
+            .caption{
+                padding-left: 120px;
+            }
+            .mob{
+                img{
+                    left: -60px;
+                    bottom: -550px;
+                    height: 950px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1280.98px){
+    .header{
+        .navbar{
+            padding: 35px 80px 0 54px;
+        }
+        .overlay{
+            padding-right: 85px;
+            .mob{
+                img{
+                    left: -27px;
+                    bottom: -550px;
+                    height: 945px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199.98px){
+    .header{
+        .navbar{
+            padding: 35px 42px 0 12px;
+            .navbar-nav{
+                margin-right: 45px !important;
+            }
+        }
+        .overlay{
+            padding-right: 45px;
+            .caption{
+                padding-left: 33px;
+            }
+            .mob{
+                img{
+                    left: -27px;
+                    left: -107px;
+                    bottom: -527px;
+                    height: 910px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1025px){
+    .header{
+        .navbar{
+            padding: 35px 25px 0 45px;
+            margin-bottom: 115px;
+            .navbar-brand{
+                width: 150px;
+            }
+        }
+        .overlay{
+            padding-right: 12px;
+            .mob{
+                img{
+                    left: -14px;
+                    bottom: -505px;
+                    width: 130%;
+                    height: 880px;
+                }
+            }
+        }
+    }
+} 
+@media (max-width: 991.98px){
+    .header{
+        .navbar{
+            padding-inline: 20px;
+            position: relative;
+            .navbar-brand{
+                position: absolute;
+                right: 30%;
+                top: 25px;
+            }
+            .navbar-toggler{
+                color: transparent;
+                background-image: linear-gradient($button-color, $min-color);
+                position: absolute;
+                left: 35%;
+                top: 50px;
+                span{
+                    color: $white;
+                    font-size: 22pt;
+                    padding: 5px;
+                }
+            }
+            .navbar-nav{
+                margin-right: 0 !important;
+                margin-top: 100px;
+                padding: 25px;
+                background-color: $min-color;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+                .nav-item{
+                    width: 100%;
+                    &:hover{
+                        background-color: $white;
+                        border-radius: 10px;
+                        -webkit-border-radius: 10px;
+                        -moz-border-radius: 10px;
+                        -ms-border-radius: 10px;
+                        -o-border-radius: 10px;
+                        .nav-link{
+                            color: $min-color;
+                        }
+                    }
+                }
+                .dropdown{
+                    .dropdown-menu{
+                        right: 333px !important;
+                    }
+                }
+                .nav-item + .nav-item{
+                    margin-top: 25px;
+                }
+            }
+        }
+        .overlay{
+            top: 200px;
+        }
+    }
+}
+@media (max-width: 768px){}
+@media (max-width: 575.98px){}
+@media (min-width: 360px) and (max-width: 420px){}
+@media (min-width: 280px) and (max-width: 350.98px){}
+
+// responsive design (index.html) ltr
+
+@media (max-width: 1399.98px){
+    html[dir = "ltr"]{
+        .header{
+            .navbar{
+                padding: 35px 77px 0 107px;
+                .navbar-nav{
+                    .dropdown{
+                        .dropdown-menu{
+                            left: -130px !important;
+                            right: initial !important;
+                        }
+                    }
+                }
+            }
+            .overlay{
+                padding-right: 0;
+                padding-left: 110px;
+                .caption{
+                    padding-left: 0;
+                    padding-right: 120px;
+                }
+                .mob{
+                    img{
+                        left: initial;
+                        right: -60px;
+                    }
+                }
+            }
+        }
+    }    
+}
+@media (max-width: 1280.98px){
+    html[dir = "ltr"]{
+        .header{
+            .navbar{
+                padding: 35px 54px 0 80px;
+            }
+            .overlay{
+                padding-right: 0;
+                padding-left: 85px;
+                .mob{
+                    img{
+                        left: initial;
+                        right: -27px;
+                    }
+                }
+            }
+        }
+    }    
+}
+@media (max-width: 1199.98px){
+    html[dir = "ltr"]{
+        .header{
+            .navbar{
+                padding: 35px 20px 0 42px;
+                .navbar-nav{
+                    margin-right: 0 !important;
+                    margin-left: 45px !important;
+                }
+            }
+            .overlay{
+                padding-right: 0;
+                padding-left: 45px;
+                .caption{
+                    padding-left: 0;
+                    padding-right: 33px;
+                }
+                .mob{
+                    img{
+                        right: -107px;
+                        left: initial;
+                        bottom: -527px;
+                        height: 910px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1025px){
+    html[dir = "ltr"]{
+        .header{
+            .navbar{
+                padding: 35px 45px 0 25px;
+            }
+            .overlay{
+                padding-right: 0;
+                padding-left: 12px;
+                .mob{
+                    img{
+                        left: initial;
+                        right: -14px;
+                    }
+                }
+            }
+        }
+    }    
+} 
