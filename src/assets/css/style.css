@@ -5,19 +5,99 @@ body {
   font-size: 16pt;
 }
 
+body a {
+  text-decoration: none;
+}
+
+body ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.about-us > .title, .sections > .title, .screen-app > .title {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 100px;
+  font-size: 40px;
+  color: #343434;
+}
+
+.about-us > .title::before, .about-us > .title::after, .sections > .title::before, .sections > .title::after, .screen-app > .title::before, .screen-app > .title::after {
+  position: absolute;
+  content: "";
+  width: 35%;
+  height: 1px;
+  background-color: #d3d3d4;
+  top: 48px;
+  left: 70px;
+}
+
+.about-us > .title::after, .sections > .title::after, .screen-app > .title::after {
+  left: initial;
+  right: 70px;
+}
+
+.active {
+  background-color: #5b9594 !important;
+}
+
+.header .overlay .caption .buttons .btn, .screen-app .app .buttons .btn {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#59d6d4), to(#5b9594));
+  background-image: linear-gradient(#59d6d4, #5b9594);
+  color: #fff;
+  font-size: 16pt;
+  width: 190px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+}
+
+.header .overlay .caption .buttons .btn img, .screen-app .app .buttons .btn img {
+  width: 20px;
+  margin-right: 5px;
+  margin-top: 0;
+}
+
+.header .overlay .caption .buttons .btn:hover, .screen-app .app .buttons .btn:hover {
+  filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+}
+
+.header .overlay .caption .buttons .android, .screen-app .app .buttons .android {
+  padding-block: 6.5px;
+  margin-right: 50px;
+}
+
+.header, .about-us, .features, .sections, .footer {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 html, body {
   overflow-x: hidden;
 }
 
 .header {
   background-image: url("../images/mobelia header@2x.png");
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow-y: hidden;
-  overflow-x: hidden;
   height: 100vh;
-  margin-bottom: 350px;
 }
 
 .header .navbar {
@@ -144,44 +224,6 @@ html, body {
   margin-bottom: 110px;
 }
 
-.header .overlay .caption .buttons .btn {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border: none;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#59d6d4), to(#5b9594));
-  background-image: linear-gradient(#59d6d4, #5b9594);
-  color: #fff;
-  font-size: 16pt;
-  width: 190px;
-  padding: 5px 10px;
-  border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
-  transition: all 300ms ease;
-  -webkit-transition: all 300ms ease;
-  -moz-transition: all 300ms ease;
-  -ms-transition: all 300ms ease;
-  -o-transition: all 300ms ease;
-}
-
-.header .overlay .caption .buttons .btn img {
-  width: 20px;
-  margin-right: 5px;
-  margin-top: 0;
-}
-
-.header .overlay .caption .buttons .btn:hover {
-  filter: brightness(90%);
-  -webkit-filter: brightness(90%);
-}
-
-.header .overlay .caption .buttons .android {
-  padding-block: 6.5px;
-  margin-right: 50px;
-}
-
 .header .overlay .mob {
   position: relative;
 }
@@ -195,38 +237,8 @@ html, body {
 }
 
 .about-us {
+  padding-top: 350px;
   background-image: url("../images/bg-about.png");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.about-us .title {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 100px;
-  font-size: 40px;
-  color: #343434;
-}
-
-.about-us .title::before, .about-us .title::after {
-  position: absolute;
-  content: "";
-  width: 35%;
-  height: 1px;
-  background-color: #d3d3d4;
-  top: 48px;
-  left: 70px;
-}
-
-.about-us .title::after {
-  left: initial;
-  right: 70px;
 }
 
 .about-us .show-case {
@@ -266,10 +278,6 @@ html, body {
 .features {
   position: relative;
   background-image: url("../images/features bg mobelia@2x.png");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom: 500px;
   height: 500px;
 }
 
@@ -348,6 +356,299 @@ html, body {
   margin-top: 25px;
 }
 
+.sections {
+  padding: 500px 0 250px;
+  background-image: url("../images/bg-sections.png");
+}
+
+.sections .show-case {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-inline: 100px;
+}
+
+.sections .show-case .sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
+
+.sections .show-case .sub .title {
+  color: #343434;
+}
+
+.sections .show-case .sub .text {
+  color: #343434;
+  font-size: 15pt;
+}
+
+.sections .show-case .products {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: (1fr)[4];
+      grid-template: auto/repeat(4, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
+}
+
+.sections .show-case .products .product .card {
+  width: 300px;
+  padding: 5px 5px 0;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  -webkit-box-shadow: 0 0 5px #ccc;
+          box-shadow: 0 0 5px #ccc;
+}
+
+.sections .show-case .products .product .card img {
+  width: 100%;
+}
+
+.sections .show-case .products .product .card .card-body {
+  color: #343434;
+  font-size: 14pt;
+  text-align: center;
+}
+
+.sections .show-case .custom-products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sections .show-case .custom-products .product .card {
+  width: 300px;
+}
+
+.screen-app {
+  background-color: #f6f6fa;
+  padding-top: 100px;
+  position: relative;
+}
+
+.screen-app .slider {
+  padding-inline: 20px;
+  position: relative;
+}
+
+.screen-app .slider .carousel-inner {
+  padding: 50px 0 190px;
+}
+
+.screen-app .slider .carousel-item {
+  background-color: transparent !important;
+}
+
+.screen-app .slider .carousel-item .active {
+  background-color: transparent !important;
+}
+
+.screen-app .slider #wrapper {
+  width: 100% !important;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.screen-app .slider #wrapper .slider-img {
+  width: 190px;
+  height: 350px;
+  z-index: 2;
+}
+
+.screen-app .slider #wrapper .slider-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.screen-app .slider #wrapper .slider-img + .slider-img {
+  margin-right: 70px;
+}
+
+.screen-app .slider #wrapper .phone {
+  position: relative;
+}
+
+.screen-app .slider #wrapper .phone .slider-img {
+  height: 375px;
+}
+
+.screen-app .slider #wrapper .phone .cover {
+  position: absolute;
+  width: 730px;
+  height: 657px;
+  top: -60px;
+  left: -323px;
+}
+
+.screen-app .slider .indecators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 250px;
+  z-index: 12;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.screen-app .slider .indecators li {
+  width: 30px;
+  border: none;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  cursor: pointer;
+  -o-border-radius: 15px;
+  height: 8px;
+  background-color: #d3d3d4;
+}
+
+.screen-app .slider .indecators .main {
+  width: 60px;
+}
+
+.screen-app .slider .indecators li + li {
+  margin-right: 10px;
+}
+
+.screen-app .app {
+  padding: 50px 100px;
+  margin-top: 400px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.screen-app .app .title {
+  color: #5b9594;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.screen-app .app .buttons .android {
+  margin-right: 30px;
+}
+
+.footer {
+  background-color: #000;
+  background-image: url("../images/mobelia footer@2x.png");
+  padding: 80px 0 200px;
+}
+
+.footer .logo {
+  width: 160px;
+}
+
+.footer .logo img {
+  width: 100%;
+}
+
+.footer .title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 16pt;
+  margin-bottom: 35px;
+  margin-top: 5px;
+}
+
+.footer .items {
+  color: #59d6d4;
+  transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+}
+
+.footer .items .item {
+  font-size: 16pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .items .item img {
+  margin-left: 10px;
+}
+
+.footer .items .item span {
+  font-size: 12pt;
+}
+
+.footer .items .item .link {
+  color: #59d6d4;
+}
+
+.footer .items .item:hover .link {
+  color: #5b9594;
+}
+
+.footer .items .item + .item {
+  margin-top: 25px;
+}
+
+.footer .items .custom-item + .custom-item {
+  margin-top: 35px;
+}
+
 html[dir="ltr"] .header .navbar {
   padding: 35px 45px 0 90px;
 }
@@ -393,7 +694,7 @@ html[dir="ltr"] .header .overlay .caption .buttons .android {
 
 html[dir="ltr"] .header .overlay .mob img {
   left: initial;
-  right: -285px;
+  right: -200px;
 }
 
 html[dir="ltr"] .about-us .title::before, html[dir="ltr"] .about-us .title::after {
@@ -419,6 +720,7 @@ html[dir="ltr"] .about-us .show-case .text {
 html[dir="ltr"] .about-us .show-case .image img {
   left: initial;
   right: 200px;
+  top: -150px;
 }
 
 html[dir="ltr"] .features .overlay .title {
@@ -433,7 +735,39 @@ html[dir="ltr"] .features .overlay .feature .content {
   margin-left: 20px;
 }
 
+html[dir="ltr"] .screen-app .slider #wrapper .slider-img + .slider-img {
+  margin-right: 0;
+  margin-left: 70px;
+}
+
+html[dir="ltr"] .screen-app .slider #wrapper .phone {
+  position: relative;
+}
+
+html[dir="ltr"] .screen-app .slider #wrapper .phone .cover {
+  left: initial;
+  right: -217px;
+}
+
+html[dir="ltr"] .screen-app .slider .indecators li + li {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+html[dir="ltr"] .screen-app .app .buttons .android {
+  margin-right: 0;
+  margin-left: 30px;
+}
+
+html[dir="ltr"] .footer .items .item img {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
 @media (max-width: 1399.98px) {
+  .header {
+    height: 106vh;
+  }
   .header .navbar {
     padding: 35px 107px 0 77px;
     margin-bottom: 100px;
