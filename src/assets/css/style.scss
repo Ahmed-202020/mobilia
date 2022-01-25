@@ -109,6 +109,11 @@ html , body{
                 margin-bottom: 110px;
             }
             @extend %buttons ; 
+            .buttons{
+                .android{
+                    margin-right: 30px;
+                }
+            }
         }
         .mob{
             position: relative;
@@ -472,7 +477,7 @@ html[dir = "ltr"]{
             .mob{
                 img{
                     left: initial;
-                    right: -200px;
+                    right: -50px;
                 }
             }
         }
@@ -508,12 +513,6 @@ html[dir = "ltr"]{
     }
     .features{
         .overlay{
-            .title{
-                text-align: center;
-                color: $white;
-                font-size: 22pt;
-                margin-bottom: 25px;
-            }
             .feature{
                 .content{
                     margin-right: 0;
@@ -595,6 +594,9 @@ html[dir = "ltr"]{
             }
         }
     }
+    .features{
+        height: 460px;
+    }
 }
 @media (max-width: 1280.98px){
     .header{
@@ -602,12 +604,24 @@ html[dir = "ltr"]{
             padding: 35px 80px 0 54px;
         }
         .overlay{
-            padding-right: 85px;
+            padding-right: 55px;
             .mob{
                 img{
-                    left: -27px;
+                    left: -50px;
                     bottom: -550px;
                     height: 945px;
+                }
+            }
+        }
+    }
+    .sections{
+        .show-case{
+            padding-inline: 0;
+            .products{
+                .product{
+                    .card{
+                        width: 250px;
+                    }
                 }
             }
         }
@@ -622,17 +636,37 @@ html[dir = "ltr"]{
             }
         }
         .overlay{
-            padding-right: 45px;
+            padding-right: 15px;
             .caption{
                 padding-left: 33px;
             }
             .mob{
                 img{
-                    left: -27px;
-                    left: -107px;
-                    bottom: -527px;
+                    left: -200px;
+                    bottom: -542px;
                     height: 910px;
+                    width: 160%;
                 }
+            }
+        }
+    }
+    .features{
+        height: 400px;
+        .overlay{
+            padding: 65px 0 0 0;
+        }
+    }
+    .sections{
+        .title{
+            &::before , &::after{
+                width: 33%;
+            }
+        }
+    }
+    .screen-app{
+        .title{
+            &::before , &::after{
+                width: 30%;
             }
         }
     }
@@ -647,22 +681,54 @@ html[dir = "ltr"]{
             }
         }
         .overlay{
-            padding-right: 12px;
+            padding-right: 25px;
             .mob{
                 img{
-                    left: -14px;
-                    bottom: -505px;
+                    left: 0px;
+                    bottom: -425px;
                     width: 130%;
-                    height: 880px;
+                    height: 700px;
                 }
             }
+        }
+    }
+   .about-us >.title , .features > .title , .sections > .title , .screen-app > .title{
+        font-size: 30px !important; 
+        &::before  , &::after{
+            top: 35px !important;
+        }
+    }
+    .features{
+        height: 425px;
+        .overlay{
+            .title{
+                margin-bottom: 50px;
+            }
+        }
+    }
+    .sections{
+        .show-case{
+            .products{
+                .product{
+                    .card{
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+    .screen-app{
+        .slider{
+            padding-right: 37px;
+            padding-left: 25px;
         }
     }
 } 
 @media (max-width: 991.98px){
     .header{
         .navbar{
-            padding-inline: 20px;
+            padding-right: 27px;
+            padding-left: 27px;
             position: relative;
             .navbar-brand{
                 position: absolute;
@@ -702,12 +768,18 @@ html[dir = "ltr"]{
                         -o-border-radius: 10px;
                         .nav-link{
                             color: $min-color;
+                            width: 100%;
+                            text-align: center;
                         }
                     }
                 }
                 .dropdown{
                     .dropdown-menu{
-                        right: 333px !important;
+                        transform: translateX(-204%);
+                        -webkit-transform: translateX(-204%);
+                        -moz-transform: translateX(-204%);
+                        -ms-transform: translateX(-204%);
+                        -o-transform: translateX(-204%);
                     }
                 }
                 .nav-item + .nav-item{
@@ -717,13 +789,791 @@ html[dir = "ltr"]{
         }
         .overlay{
             top: 200px;
+            padding-right: 30px;
+            .caption{
+                .title{
+                    h3{
+                        font-size: 20pt;
+                    }
+                }
+                .text{
+                    font-size: 14pt;
+                }
+                .buttons{
+                    .btn{
+                        font-size: 14px;
+                        width: 150px;
+                    }
+                    .android{
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .mob{
+                img{
+                    left: -127px;
+                    bottom: -430px;
+                    height: 700px;
+                    width: 140%;
+                }
+            }
+        }
+    }
+    .about-us >.title , .features > .title , .sections > .title , .screen-app > .title{
+        font-size: 30px !important; 
+        &::before  , &::after{
+            top: 35px !important;
+        }
+    }
+    .about-us{
+        .show-case{
+            .text{
+                font-size: 12pt;
+                padding-right: 22px;
+                margin-top: 117px;
+            }
+            .image{
+                width: 700px;
+                img{
+                    left: 155px;
+                    top: -63px !important;
+                }
+            }
+        }
+    }
+    .features{
+        height: 415px;
+        .overlay{
+            .title{
+                margin-bottom: 40px;
+            }
+            .feature{
+                .image{
+                    width: 80px;
+                    height: 80px;
+                    img{
+                        width: 35px;
+                    }
+                }
+                .sofa{
+                    img{
+                        width: 42px;
+                    }
+                }
+                .price{
+                    img{
+                        width: 38px;
+                    }
+                }
+                .delivery{
+                    img{
+                        width: 45px;
+                    }
+                }
+            }
+            .feature + .feature{
+                margin-top: 12px;
+            }
+        }
+    }
+    .sections{
+        .show-case{
+            .products{
+                .product{
+                    .card{
+                        width: 185px;
+                    }
+                }
+            }
+        }
+    }
+    .screen-app{
+        .slider{
+            #wrapper{
+                .slider-img{
+                    width: 136px;
+                    height: 300px;
+                }
+                .slider-img + .slider-img{
+                    margin-right: 40px;
+                }
+                .phone{
+                    .slider-img{
+                        height: 330px;
+                        width: 140px;
+                    }
+                    .cover{
+                        width: 541px;
+                        height: 577px;
+                        top: -52px;
+                        left: -244px;
+                    }
+                }
+            }
+        }
+        .app{
+            margin-top: 250px;
+        }
+    }  
+    .footer{
+        .container{
+            max-width: 800px;
         }
     }
 }
-@media (max-width: 768px){}
-@media (max-width: 575.98px){}
-@media (min-width: 360px) and (max-width: 420px){}
-@media (min-width: 280px) and (max-width: 350.98px){}
+@media (max-width: 768px){
+    .header{
+        height: 93vh;
+        .navbar{
+            .navbar-brand{
+                right: 22%;
+            }
+            .navbar-nav{
+                .dropdown{
+                    .dropdown-menu{
+                        transform: translateX(-160%);
+                        -webkit-transform: translateX(-160%);
+                        -moz-transform: translateX(-160%);
+                        -ms-transform: translateX(-160%);
+                        -o-transform: translateX(-160%);
+                    }
+                }
+            }
+        }
+        .overlay{
+            padding-right: 10px;
+            .caption{
+                padding-left: 0;
+                .title{
+                    h3{
+                        font-size: 18pt;
+                    }
+                }
+                .text{
+                    margin-bottom: 35px;
+                }
+                .buttons{
+                    .btn{
+                        width: 124px;
+                    }
+                    .android{
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .mob{
+                img{
+                    left: 11px !important;
+                    bottom: -335px !important ;
+                    height: 560px !important;
+                    width: 125% !important;
+                }
+            }
+        }
+    }
+    .about-us >.title , .features > .title , .sections > .title , .screen-app > .title{
+        &::before  , &::after{
+            width: 25%;
+        }
+    }
+    .sections{
+        .show-case{
+            .products{
+                grid-template: auto / repeat(2 , 1fr);
+                .product{
+                    .card{
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+    .screen-app{
+        .slider{
+            padding-inline : 15px;
+            display: flex;
+            justify-content: center;
+            #wrapper{
+                .slider-img + .slider-img{
+                    margin-right: 30px;
+                }
+            }
+        }
+        .app{
+            padding: 50px 25px;
+        }
+    }
+}
+@media (max-width: 767.98px){
+    .header{
+        height: 93vh;
+        .navbar{
+            padding-inline: 15px;
+            .navbar-brand{
+                right: 22%;
+            }
+        }
+        .overlay{
+            .caption{
+                padding-left: 0;
+                .title{
+                    h3{
+                        font-size: 18pt;
+                    }
+                }
+                .text{
+                    margin-bottom: 35px;
+                }
+                .buttons{
+                    .btn{
+                        width: 124px;
+                    }
+                    .android{
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .mob{
+                img{
+                    left: -137px !important;
+                    bottom: -360px !important ;
+                    height: 582px !important;
+                    width: 160% !important;
+                }
+            }
+        }
+    }
+    .about-us{
+        .show-case{
+            .offset-1{
+                margin-right: 0;
+            }
+            .image{
+                img{
+                    left: 70px;
+                }
+            }
+        }
+    }
+    .features{
+        height: 410px;
+        .overlay{
+            .feature{
+                .content{
+                    margin-right: 15px;
+                    .title{
+                        margin-bottom: 10px;
+                        font-size: 14pt;
+                    }
+                }
+            }
+            .col-img{
+                img{
+                    width: 135%;
+                    left: 80px;
+                    position: relative;
+                }
+            }
+        }
+    }
+    .footer{
+        .items{
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            margin-top: 70px;
+            .item + .item{
+                margin-right: 30px;
+            }
+        }
+        .custom-items{
+            margin-top: 25px;
+        }
+        .title{
+            text-align: center;
+            margin-top: 70px;
+            margin-bottom: 0;
+        }
+    }
+}
+@media (max-width: 575.98px){
+    .header{
+        .navbar{
+            padding-inline: 24px;
+            .navbar-brand{
+                right: 14%;
+            }
+            .navbar-toggler{
+                left: 30%;
+            }
+            .dropdown{
+                .dropdown-menu{
+                    transform: translateX(-112%) !important;
+                    -webkit-transform: translateX(-112%) !important;
+                    -moz-transform: translateX(-112%) !important;
+                    -ms-transform: translateX(-112%) !important;
+                    -o-transform: translateX(-112%) !important;
+                }
+            }
+        }
+        .overlay{
+            .row{
+                --bs-gutter-x: 0rem;
+                .col-sm-6{
+                    padding: 0;
+                    .caption{
+                        padding-inline: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        .text{
+                            text-align: center;
+                        }
+                    }
+                }
+                .mob{
+                    display: none !important;
+                }
+            }
+        }
+    }
+    .sections{
+        .products{
+            .product{
+                .card{
+                    width: 220px !important;
+                }
+            }
+        }
+    }
+    .about-us >.title , .features > .title , .sections > .title , .screen-app > .title{
+        &::before  , &::after{
+            width: 17%;
+        }
+    }
+    .features{
+        height: 388px;
+        .overlay{
+            .feature{
+                .content{
+                    margin-right: 12px;
+                    .text{
+                        font-size: 10pt;
+                    }
+                }
+            }
+        }
+    }
+    .screen-app{
+        .slider{
+            #wrapper{
+                .slider-img{
+                    height: 200px;
+                }
+                .slider-img + .slider-img{
+                    margin-right: 22px;
+                }
+                .phone{
+                    .slider-img{
+                        width: 110px;
+                        height: 230px;
+                    }
+                    .cover{
+                        width: 428px;
+                        height: 405px;
+                        top: -38px;
+                        left: -190px;
+                    }
+                }
+            }
+        }  
+        .app{
+            padding: 50px 10px;
+            .title{
+                font-size: 20px;
+            }
+            .buttons{
+                .btn{
+                    width: 140px;
+                    span{
+                        font-size: 12pt;
+                    }
+                }
+                .android{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .footer{
+        .logo{
+            width: 120px;
+        }
+        .items{
+            flex-wrap: wrap;
+            .item{
+                font-size: 15pt;
+                span{
+                    font-size: 15pt;
+                }
+            }
+        }
+        .title{
+            font-size: 20px;
+        }
+        
+    }
+}
+@media (min-width: 360px) and (max-width: 420px){
+    .header{
+        .navbar{
+            padding-inline: 5px;
+            .navbar-brand{
+                width: 100px;
+            }
+            .navbar-toggler{
+                width: 60px;
+                display: flex;
+                justify-content: center;
+                top: 25px;
+                left: 80px;
+            }
+            .dropdown{
+                .dropdown-menu{
+                    transform: translateX(-66%) !important;
+                    -webkit-transform: translateX(-66%) !important;
+                    -moz-transform: translateX(-66%) !important;
+                    -ms-transform: translateX(-66%) !important;
+                    -o-transform: translateX(-66%) !important;
+                }
+            }
+        }
+    }
+    .about-us >.title , .features > .title , .sections > .title , .screen-app > .title{
+        font-size: 25px !important;
+        &::before , &::after{
+            content: initial;
+        }
+    }
+    .about-us{
+        padding-top: 200px;
+        .show-case{
+            .title{
+                margin-bottom: 0;
+            }
+            .text{
+                margin-top: 0;
+            }
+            .image{
+                img{
+                    left: 73px;
+                    width: 75%;
+                }
+            }
+        }
+    }
+    .features{
+        height: 270px;
+        .overlay{
+            padding: 40px 0 0 0;
+            .title{
+                font-size: 15pt;
+            }
+            .col-img{
+                img{
+                    top: 10px;
+                    left: 45px;
+                }
+            }
+            .feature{
+                .content{
+                    margin-bottom: 0;
+                    .title{
+                        font-size: 10pt;
+                    }
+                    .text{
+                        font-size: 8pt;
+                        margin-bottom: 20px;
+                    }
+                }
+                .image{
+                    width: 60px;
+                    height: 60px;
+                    img{
+                        width: 25px;
+                    }
+                }
+            }
+            .feature + .feature{
+                margin-top: 0px;
+            }
+        }
+    }
+    .sections{
+        .show-case{
+            .sub{
+                .title{
+                    font-size: 15pt;
+                }
+                .text{
+                    font-size: 11pt;
+                }
+            }
+            .products{
+                grid-template: auto / 1fr;
+                .product{
+                    .card{
+                        width: 300px !important;
+                    }
+                }
+            }
+            .custom-products{
+                flex-direction: column;
+            }
+        }
+    }
+    .screen-app{
+        .slider{
+            #wrapper{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .slider-img{
+                    width: 150px;
+                    height: 290px;
+                }
+                .slider-img + .slider-img{
+                    margin-right: 0 ;
+                    margin-top: 50px ;
+                }
+                .phone{
+                    .slider-img{
+                        margin-right: 18px ;
+                    }
+                    .cover{
+                        top: -38px;
+                        left: -168px;
+                    }
+                }
+            }
+        }
+        .app{
+            flex-direction: column;
+            padding: 20px 10px;
+            margin-top: 160px;
+            .title{
+                margin-bottom: 20px;
+            }
+            .buttons{
+                .btn{
+                    width: 160px;
+                    span{
+                        font-size: 14pt;
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        .items{
+            flex-wrap: wrap;
+            .item{
+                font-size: 14pt;
+            }
+        }
+    }
+}
+@media (min-width: 280px) and (max-width: 350.98px){
+    .header{
+        .navbar{
+            padding-inline: 5px;
+            .navbar-brand{
+                width: 100px;
+            }
+            .navbar-toggler{
+                width: 60px;
+                display: flex;
+                justify-content: center;
+                top: 25px;
+                left: 50px;
+            }
+            .dropdown{
+                .dropdown-menu{
+                    transform: translateX(-54%) !important;
+                    -webkit-transform: translateX(-54%) !important;
+                    -moz-transform: translateX(-54%) !important;
+                    -ms-transform: translateX(-54%) !important;
+                    -o-transform: translateX(-54%) !important;
+                }
+            }
+        }
+        .overlay{
+            .caption{
+                .title{
+                    h3{
+                        font-size: 14pt;
+                    }
+                }
+                .buttons{
+                    .btn{
+                        width: 110px;
+                        span{
+                            font-size: 9pt;
+                        }
+                        img{
+                            width: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .about-us >.title , .features > .title , .sections > .title , .screen-app > .title{
+        font-size: 25px !important;
+        &::before , &::after{
+            content: initial;
+        }
+    }
+    .about-us{
+        padding-top: 200px;
+        .show-case{
+            .title{
+                margin-bottom: 0;
+            }
+            .text{
+                margin-top: 0;
+            }
+            .image{
+                img{
+                    left: 120px;
+                    width: 75%;
+                }
+            }
+        }
+    }
+    .features{
+        height: 245px;
+        .overlay{
+            padding: 40px 0 0 0;
+            .title{
+                font-size: 15pt;
+            }
+            .col-img{
+                img{
+                    top: 10px;
+                    left: 45px;
+                }
+            }
+            .feature{
+                .content{
+                    margin-bottom: 0;
+                    .title{
+                        font-size: 6pt;
+                    }
+                    .text{
+                        font-size: 6pt;
+                        margin-bottom: 20px;
+                    }
+                }
+                .image{
+                    width: 60px;
+                    height: 60px;
+                    img{
+                        width: 25px;
+                    }
+                }
+            }
+            .feature + .feature{
+                margin-top: 0px;
+            }
+        }
+    }
+    .sections{
+        padding: 500px 0 100px;
+        .show-case{
+            .sub{
+                .title{
+                    font-size: 15pt;
+                }
+                .text{
+                    font-size: 9pt;
+                }
+            }
+            .products{
+                grid-template: auto / 1fr;
+                .product{
+                    .card{
+                        width: 250px !important;
+                    }
+                }
+            }
+            .custom-products{
+                flex-direction: column;
+            }
+        }
+    }
+    .screen-app{
+        .slider{
+            #wrapper{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .slider-img{
+                    width: 150px;
+                    height: 290px;
+                }
+                .slider-img + .slider-img{
+                    margin-right: 0 ;
+                    margin-top: 50px ;
+                }
+                .phone{
+                    .slider-img{
+                        margin-right: 18px ;
+                    }
+                    .cover{
+                        top: -38px;
+                        left: -168px;
+                    }
+                }
+            }
+        }
+        .app{
+            flex-direction: column;
+            padding: 20px 10px;
+            margin-top: 160px;
+            .title{
+                margin-bottom: 20px;
+            }
+            .buttons{
+                .btn{
+                    width: 120px;
+                    span{
+                        font-size: 9pt;
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        .items{
+            flex-wrap: wrap;
+            .item{
+                font-size: 11pt;
+                span{
+                    font-size: 11pt;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
 
 // responsive design (index.html) ltr
 
@@ -762,15 +1612,15 @@ html[dir = "ltr"]{
     html[dir = "ltr"]{
         .header{
             .navbar{
-                padding: 35px 54px 0 80px;
+                padding: 35px 0 0 80px;
             }
             .overlay{
                 padding-right: 0;
-                padding-left: 85px;
+                padding-left: 50px;
                 .mob{
                     img{
                         left: initial;
-                        right: -27px;
+                        right: -50px;
                     }
                 }
             }
@@ -796,7 +1646,7 @@ html[dir = "ltr"]{
                 }
                 .mob{
                     img{
-                        right: -107px;
+                        right: -200px;
                         left: initial;
                         bottom: -527px;
                         height: 910px;
@@ -814,39 +1664,537 @@ html[dir = "ltr"]{
             }
             .overlay{
                 padding-right: 0;
-                padding-left: 12px;
+                padding-left: 25px;
                 .mob{
                     img{
                         left: initial;
-                        right: -14px;
+                        right: 0;
                     }
                 }
             }
         }
     }    
+    .screen-app{
+        .slider{
+            padding-right: 34px;
+            padding-left: 20px;
+        }
+    }
 } 
 @media (max-width: 991.98px){
     html[dir = "ltr"]{
-
+        .header{
+            .navbar{
+                padding-inline: 30px;
+                .navbar-brand{
+                    left: 30%;
+                    right: initial;
+                }
+                .navbar-toggler{
+                    right:35%;
+                    left: initial;
+                }
+                .navbar-nav{
+                    margin-right: 0 !important;
+                    margin-left: 0 !important;
+                    .dropdown{
+                        .dropdown-menu{
+                            transform: translateX(204%);
+                            -webkit-transform: translateX(204%);
+                            -moz-transform: translateX(204%);
+                            -ms-transform: translateX(204%);
+                            -o-transform: translateX(204%);
+                        }
+                    }
+                }
+            }
+            .overlay{
+                padding-right: 0;
+                padding-left: 30px;
+                .caption{
+                    .buttons{
+                        .android{
+                            margin-right: 0;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                .mob{
+                    img{
+                        left: initial;
+                        bottom: -430px;
+                        right: -127px;
+                        height: 700px;
+                        width: 140%;
+                    }
+                }
+            }
+        }
+        .about-us{
+            .show-case{
+                .text{
+                    padding-left: 22px;
+                    padding-right: 0;
+                }
+                .image{
+                    img{
+                        left: initial;
+                        right: 155px;
+                    }
+                }
+            }
+        }
+        .screen-app{
+            .slider{
+                .carousel-inner{
+                    margin-right: 0;
+                    margin-left: 6px;
+                }
+                #wrapper{
+                    .slider-img + .slider-img{
+                        margin-left: 40px;
+                        margin-right: 0;
+                    }
+                    .phone{
+                        .cover{
+                            left: initial;
+                            right: -165px;
+                        }
+                    }
+                }
+            }
+        }  
     }
 }
 @media (max-width: 768px){
     html[dir = "ltr"]{
-
+        .header{
+            .navbar{
+                .navbar-brand{
+                    right: initial ;
+                    left: 22%;
+                }
+                .navbar-nav{
+                    .dropdown{
+                        .dropdown-menu{
+                            transform: translateX(160%);
+                            -webkit-transform: translateX(160%);
+                            -moz-transform: translateX(160%);
+                            -ms-transform: translateX(160%);
+                            -o-transform: translateX(160%);
+                        }
+                    }
+                }
+            }
+            .overlay{
+                padding-right: 0;
+                padding-left: 10px;
+                .caption{
+                    padding-left: 0;
+                    padding-right: 0;
+                    .buttons{
+                        .android{
+                            margin-right: 0;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+                .mob{
+                    img{
+                        left: initial !important;
+                        right: 11px !important;
+                        bottom: -335px !important ;
+                    }
+                }
+            }
+        }
+        .screen-app{
+            .slider{
+                #wrapper{
+                    .slider-img + .slider-img{
+                        margin-left: 30px;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767.98px){
+    html[dir = "ltr"]{
+        .header{
+            .navbar{
+                .navbar-brand{
+                    right: initial;
+                    left: 22%;
+                }
+            }
+            .overlay{
+                .caption{
+                    padding-left: 0;
+                    padding-right: 0;
+                    .buttons{
+                        .android{
+                            margin-right: 0;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+                .mob{
+                    img{
+                        left: initial !important;
+                        right: -137px !important;
+                        bottom: -360px !important ;
+                        height: 582px !important;
+                        width: 160% !important;
+                    }
+                }
+            }
+        }
+        .features{
+            height: 410px;
+            .overlay{
+                .feature{
+                    .content{
+                        margin-right: 0;
+                        margin-left: 15px;
+                    }
+                }
+                .col-img{
+                    img{
+                        left: initial;
+                        right: 80px;
+                    }
+                }
+            }
+        }
+        .about-us{
+            .show-case{
+                .offset-1{
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+                .image{
+                    img{
+                        left: initial;
+                        right: 70px;
+                    }
+                }
+            }
+        }
+        .footer{
+            .items{
+                .item + .item{
+                    margin-right: 0;
+                    margin-left: 30px;
+                }
+            }
+        }
     }
 }
 @media (max-width: 575.98px){
     html[dir = "ltr"]{
-
+        .header{
+            .navbar{
+                .navbar-brand{
+                    right: initial ;
+                    left: 14%;
+                }
+                .navbar-toggler{
+                    left: initial;
+                    right: 30%;
+                }
+                .dropdown{
+                    .dropdown-menu{
+                        transform: translateX(112%) !important;
+                        -webkit-transform: translateX(112%) !important;
+                        -moz-transform: translateX(112%) !important;
+                        -ms-transform: translateX(112%) !important;
+                        -o-transform: translateX(112%) !important;
+                    }
+                }
+            }
+            .overlay{
+                .row{
+                    --bs-gutter-x: 0rem;
+                    .col-sm-6{
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        .features{
+            height: 388px;
+            .overlay{
+                .feature{
+                    .content{
+                        margin-right: 25px;
+                        margin-left: 12px;
+                    }
+                }
+            }
+        }
+        .screen-app{
+            .slider{
+                #wrapper{
+                    .slider-img{
+                        height: 200px;
+                    }
+                    .slider-img + .slider-img{
+                        margin-left: 22px;
+                        margin-right: 0;
+                    }
+                    .phone{
+                        .slider-img{
+                            width: 110px;
+                            height: 230px;
+                        }
+                        .cover{
+                            width: 428px;
+                            height: 405px;
+                            top: -38px;
+                            left: initial;
+                            right: -128px;
+                        }
+                    }
+                }
+            }  
+            .app{
+                padding: 50px 10px;
+                .title{
+                    font-size: 20px;
+                }
+                .buttons{
+                    .btn{
+                        width: 165px;
+                    }
+                    .android{
+                        margin-right: 10px;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        .footer{
+            .logo{
+                width: 120px;
+            }
+            .items{
+                .item{
+                    font-size: 10pt;
+                    span{
+                        font-size: 10pt;
+                    }
+                }
+            }
+            .title{
+                font-size: 14px;
+            }
+            
+        }
     }
 }
 @media (min-width: 360px) and (max-width: 420px){
     html[dir = "ltr"]{
-
+        .header{
+            .navbar{
+                padding-inline: 5px;
+                .navbar-toggler{
+                    left: initial;
+                    right: 80px;
+                }
+                .dropdown{
+                    .dropdown-menu{
+                        transform: translateX(66%) !important;
+                        -webkit-transform: translateX(66%) !important;
+                        -moz-transform: translateX(66%) !important;
+                        -ms-transform: translateX(66%) !important;
+                        -o-transform: translateX(66%) !important;
+                    }
+                }
+            }
+        }
+        .about-us >.title , .features > .title , .sections > .title , .screen-app > .title{
+            font-size: 25px !important;
+            &::before , &::after{
+                content: initial;
+            }
+        }
+        .about-us{
+            .show-case{
+                .image{
+                    img{
+                        left: initial;
+                        right: 73px;
+                    }
+                }
+            }
+        }
+        .features{
+            height: 265px;
+            .overlay{
+                .col-img{
+                    img{
+                        left: initial;
+                        right: 45px;
+                    }
+                }
+                .feature{
+                    .content{
+                        .text{
+                            font-size: 7pt;
+                        }
+                        .title{
+                            font-size: 9pt;
+                        }
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+        .sections{
+            .show-case{
+                .custom-products{
+                    flex-direction: column;
+                }
+            }
+        }
+        .screen-app{
+            .slider{
+                #wrapper{
+                    .slider-img{
+                        width: 150px;
+                        height: 290px;
+                    }
+                    .slider-img + .slider-img{
+                        margin-right: 0 ;
+                        margin-left: 0;
+                    }
+                    .phone{
+                        .slider-img{
+                            margin-right: 0 ;
+                            margin-left: 18px;
+                        }
+                        .cover{
+                            top: -38px;
+                            left: initial !important;
+                            right: -106px !important;
+                        }
+                    }
+                }
+            }
+            .app{
+                .buttons{
+                    .btn{
+                        width: 160px;
+                        span{
+                            font-size: 14pt;
+                        }
+                    }
+                    .android{
+                        margin-right: 0;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
     }
 }
 @media (min-width: 280px) and (max-width: 350.98px){
     html[dir = "ltr"]{
-
+        .header{
+            .navbar{
+                .navbar-toggler{
+                    left: initial;
+                    right: 50px;
+                }
+                .dropdown{
+                    .dropdown-menu{
+                        transform: translateX(54%) !important;
+                        -webkit-transform: translateX(54%) !important;
+                        -moz-transform: translateX(54%) !important;
+                        -ms-transform: translateX(54%) !important;
+                        -o-transform: translateX(54%) !important;
+                    }
+                }
+            }
+        }
+        .about-us >.title , .features > .title , .sections > .title , .screen-app > .title{
+            font-size: 25px !important;
+            &::before , &::after{
+                content: initial;
+            }
+        }
+        .about-us{
+            .show-case{
+                .image{
+                    img{
+                        left: initial;
+                        right: 120px;
+                    }
+                }
+                .text{
+                    padding-left: 14px;
+                }
+            }
+        }
+        .features{
+            height: 280px;
+            .overlay{
+                .col-img{
+                    img{
+                        left: initial;
+                        right: 45px;
+                    }
+                }
+                .feature{
+                    .content{
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+        .screen-app{
+            .slider{
+                #wrapper{
+                    .slider-img{
+                        width: 150px;
+                        height: 290px;
+                    }
+                    .slider-img + .slider-img{
+                        margin-right: 0 ;
+                        margin-left: 0;
+                        margin-top: 50px ;
+                    }
+                    .phone{
+                        .slider-img{
+                            margin-right: 0;
+                            margin-left: 18px;
+                        }
+                        .cover{
+                            top: -38px;
+                            left: initial;
+                            right: -106px;
+                        }
+                    }
+                }
+            }
+            .app{
+                .buttons{
+                    .btn{
+                        width: 120px;
+                        padding-block: 3px;
+                        padding-inline: 2px;
+                        line-height: 20px;
+                        img{
+                            width: 14px;
+                        }
+                        span{
+                            font-size: 9pt;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
