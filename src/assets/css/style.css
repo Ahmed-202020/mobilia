@@ -2188,7 +2188,28 @@ html[dir="ltr"] .footer .items .item img {
   }
 }
 
+@media (min-width: 912px) and (max-width: 913px) {
+  .header {
+    height: 69vh;
+  }
+  .header .overlay .mob img {
+    height: 517px;
+    width: 140%;
+    transform: matrix(1, 0, 0, 1, 2, -269);
+    -webkit-transform: matrix(1, 0, 0, 1, 2, -269);
+    -moz-transform: matrix(1, 0, 0, 1, 2, -269);
+    -ms-transform: matrix(1, 0, 0, 1, 2, -269);
+    -o-transform: matrix(1, 0, 0, 1, 2, -269);
+  }
+  .screen-app .slider .carousel-inner .cover {
+    right: 239px !important;
+  }
+}
+
 @media (min-width: 820px) and (max-width: 820px) {
+  .header {
+    height: 62vh;
+  }
   .header .navbar .navbar-nav .dropdown .dropdown-menu {
     transform: translateX(-160%) !important;
     -webkit-transform: translateX(-160%) !important;
@@ -2196,13 +2217,17 @@ html[dir="ltr"] .footer .items .item img {
     -ms-transform: translateX(-160%) !important;
     -o-transform: translateX(-160%) !important;
   }
+  .header .overlay {
+    top: 144px;
+  }
   .header .overlay .mob img {
     width: 136%;
-    transform: matrix(1, 0, 0, 1, 72, -300);
-    -webkit-transform: matrix(1, 0, 0, 1, 72, -300);
-    -moz-transform: matrix(1, 0, 0, 1, 72, -300);
-    -ms-transform: matrix(1, 0, 0, 1, 72, -300);
-    -o-transform: matrix(1, 0, 0, 1, 72, -300);
+    height: 539px;
+    transform: matrix(1, 0, 0, 1, 72, -260);
+    -webkit-transform: matrix(1, 0, 0, 1, 72, -260);
+    -moz-transform: matrix(1, 0, 0, 1, 72, -260);
+    -ms-transform: matrix(1, 0, 0, 1, 72, -260);
+    -o-transform: matrix(1, 0, 0, 1, 72, -260);
   }
   .sections .show-case .products {
     -ms-grid-rows: auto !important;
@@ -2232,10 +2257,53 @@ html[dir="ltr"] .footer .items .item img {
   }
 }
 
+@media (min-width: 412px) and (max-width: 413px) {
+  .screen-app .slider .carousel-inner .cover {
+    right: 122px !important;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 415px) {
+  .features {
+    height: 263px;
+  }
+  .screen-app .slider .carousel-inner .cover {
+    right: 123px !important;
+  }
+}
+
+@media (min-width: 393px) and (max-width: 394px) {
+  .features {
+    height: 263px;
+  }
+  .screen-app .slider .carousel-inner .cover {
+    right: 113px !important;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 391px) {
+  .screen-app .slider .carousel-inner .cover {
+    right: 111px !important;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 376px) {
+  .screen-app .slider .carousel-inner .cover {
+    right: 103px !important;
+  }
+}
+
 @media (min-width: 972px) and (max-width: 972px) {
   html[dir="ltr"] .screen-app .slider .carousel-inner .cover {
     right: initial !important;
     left: 202px !important;
+  }
+}
+
+@media (min-width: 912px) and (max-width: 913px) {
+  html[dir="ltr"] .screen-app .slider .carousel-inner .cover {
+    right: initial !important;
+    left: 171px !important;
   }
 }
 
@@ -2249,11 +2317,11 @@ html[dir="ltr"] .footer .items .item img {
   }
   html[dir="ltr"] .header .overlay .mob img {
     width: 136%;
-    transform: matrix(1, 0, 0, 1, -72, -300);
-    -webkit-transform: matrix(1, 0, 0, 1, -72, -300);
-    -moz-transform: matrix(1, 0, 0, 1, -72, -300);
-    -ms-transform: matrix(1, 0, 0, 1, -72, -300);
-    -o-transform: matrix(1, 0, 0, 1, -72, -300);
+    transform: matrix(1, 0, 0, 1, -72, -260);
+    -webkit-transform: matrix(1, 0, 0, 1, -72, -260);
+    -moz-transform: matrix(1, 0, 0, 1, -72, -260);
+    -ms-transform: matrix(1, 0, 0, 1, -72, -260);
+    -o-transform: matrix(1, 0, 0, 1, -72, -260);
   }
   html[dir="ltr"] .screen-app .slider .carousel-inner #wrapper .slider-img + .slider-img {
     margin-right: 0;
@@ -2279,6 +2347,47 @@ html[dir="ltr"] .footer .items .item img {
   }
   html[dir="ltr"] .screen-app .app .buttons .btn {
     width: 155px;
+  }
+}
+
+@media (min-width: 412px) and (max-width: 413px) {
+  html[dir="ltr"] .screen-app .slider .carousel-inner .cover {
+    right: initial !important;
+    left: 100px !important;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 415px) {
+  html[dir="ltr"] .screen-app .slider .carousel-inner .cover {
+    right: initial !important;
+    left: 101px !important;
+  }
+}
+
+@media (min-width: 393px) and (max-width: 394px) {
+  html[dir="ltr"] .features {
+    height: 254px;
+  }
+  html[dir="ltr"] .screen-app .slider .carousel-inner .cover {
+    right: initial !important;
+    left: 90px !important;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 391px) {
+  html[dir="ltr"] .screen-app .slider .carousel-inner .cover {
+    right: initial !important;
+    left: 89px !important;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 376px) {
+  html[dir="ltr"] .features {
+    height: 253px;
+  }
+  html[dir="ltr"] .screen-app .slider .carousel-inner .cover {
+    left: 82px !important;
+    right: initial !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
